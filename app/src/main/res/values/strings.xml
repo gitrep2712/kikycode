@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">kikyUI</string>
+    <string name="connect_with_fb">Connect with Facebook</string>
+    <string name="connect_with_google">Connect with Google</string>
+    <string name="more_options">MORE OPTIONS</string>
+    <string name="disclaimer">We don\'t post anything to facebook</string>
+    <string name="login_phone">Login with Mobile Number</string>
+    <string name="login_email">Login with Mobile E-mail</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="title_activity_main_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_history">History</string>
+    <string name="title_message">Message</string>
+    <string name="title_friends">Friends</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

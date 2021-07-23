@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginMobileActivity">
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/btn_back"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_arrow_left"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_phone"
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/btn_back"/>
+    <com.hbb20.CountryCodePicker
+        app:ccp_hintExampleNumber="true"
+        android:id="@+id/country_code_picker"
+        android:clickable="true"
+        android:focusable="true"
+        app:ccp_showPhoneCode="true"
+        android:layout_below="@id/tv_title"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.hbb20.CountryCodePicker>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/country_code_picker"
+        android:text="@string/next"
+        android:layout_margin="20dp"
+        android:background="@drawable/next_btn_bg"
+        />
+
+</RelativeLayout>

@@ -124,6 +124,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/dark_grey_bg"
                 android:padding="5dp"
                 android:src="@drawable/ic_link" />
 
@@ -158,6 +159,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_bg"
+                android:backgroundTint="@color/dark_grey_bg"
                 android:padding="5dp"
                 android:src="@drawable/ic_link" />
 

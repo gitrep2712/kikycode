@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.kikyui.R
+import com.example.kikyui.adapters.MessageAdapter
+import com.example.kikyui.adapters.MessageListAdapter
 import com.example.kikyui.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
@@ -35,6 +37,8 @@ class MessageFragment : Fragment() {
 //        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
+        val rvMessage= binding.rvMessage
+        rvMessage.adapter= activity?.let { MessageListAdapter(it) }
         return root
     }
 

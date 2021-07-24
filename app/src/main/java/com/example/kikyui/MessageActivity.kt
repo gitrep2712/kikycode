@@ -10,6 +10,9 @@ class MessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_message)
         supportActionBar?.hide()
+        btnBack.setOnClickListener {
+            finish()
+        }
         rvMessage.adapter=MessageAdapter()
 
 

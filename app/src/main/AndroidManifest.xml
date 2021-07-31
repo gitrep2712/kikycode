@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KikyUI">
-        <activity android:name=".GddesActivity"></activity>
+        <activity
+            android:name=".HistoryGalleryActivity"
+            android:exported="true" />
+        <activity android:name=".GddesActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".AccountSettingActivity" />

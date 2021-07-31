@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.kikyui.AccountSettingActivity
 import com.example.kikyui.GddesActivity
 import com.example.kikyui.HistoryActivity
+import com.example.kikyui.HistoryGalleryActivity
 import com.example.kikyui.databinding.FragmentExploreBinding
 
 class ExploreFragment : Fragment() {
@@ -41,7 +42,7 @@ class ExploreFragment : Fragment() {
             startActivity(intent)
         }
         btnHistory.setOnClickListener {
-            val intent = Intent(activity, HistoryActivity::class.java)
+            val intent = Intent(activity, HistoryGalleryActivity::class.java)
             startActivity(intent)
         }
         btnGddess.setOnClickListener {

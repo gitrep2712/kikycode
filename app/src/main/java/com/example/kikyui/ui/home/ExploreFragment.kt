@@ -39,7 +39,7 @@ class ExploreFragment : Fragment() {
             startActivity(intent)
         }
         btnHistory.setOnClickListener {
-            val intent = Intent(activity, SettingActivity::class.java)
+            val intent = Intent(activity, IncomingCallActivity::class.java)
             startActivity(intent)
         }
         btnGddess.setOnClickListener {

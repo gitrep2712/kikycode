@@ -10,5 +10,8 @@
     <color name="grey_bg">#F0F1F5</color>
     <color name="dark_grey_bg">#E3E3E4</color>
     <color name="green">#4CAF50</color>
+    <color name="red">#EE7361</color>
+    <color name="blue">#71DDFB</color>
+    <color name="purple">#7074EF</color>
 
 </resources>

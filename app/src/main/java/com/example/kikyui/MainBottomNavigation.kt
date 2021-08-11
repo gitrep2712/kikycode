@@ -18,8 +18,8 @@ class MainBottomNavigation : AppCompatActivity() {
 
         binding = ActivityMainBottomNavigationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
         val navView: BottomNavigationView = binding.navView
+
 
         val navController =
             findNavController(R.id.nav_host_fragment_activity_main_bottom_navigation)
@@ -27,10 +27,12 @@ class MainBottomNavigation : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_explore, R.id.navigation_history, R.id.navigation_message,R.id.navigation_friend
+                R.id.navigation_explore, R.id.navigation_discover, R.id.navigation_message,R.id.navigation_friend
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        supportActionBar?.hide()
+        actionBar?.hide()
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 }

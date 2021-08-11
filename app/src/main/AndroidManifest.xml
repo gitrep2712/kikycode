@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kikyui">
 
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KikyUI">
-        <activity android:name=".MessageActivity"></activity>
+        <activity
+            android:name=".LinkSocialMediaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IncomingCallActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CoinsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".ProfileScreen"
+            android:exported="true" />
+        <activity
+            android:name=".HistoryGalleryActivity"
+            android:exported="true" />
+        <activity android:name=".GddesActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".MessageActivity" />
         <activity android:name=".AccountSettingActivity" />
         <activity
             android:name=".MainActivity"

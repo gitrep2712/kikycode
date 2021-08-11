@@ -117,16 +117,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="10dp"
+            android:id="@+id/llLinkSocial"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@drawable/circular_bg"
-                android:backgroundTint="@color/dark_grey_bg"
                 android:padding="5dp"
-                android:src="@drawable/ic_link" />
+                android:src="@drawable/ic_link_yellow" />
 
             <TextView
                 android:id="@+id/tv_social_media"
@@ -158,10 +157,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@drawable/circular_bg"
-                android:backgroundTint="@color/dark_grey_bg"
                 android:padding="5dp"
-                android:src="@drawable/ic_link" />
+                android:src="@drawable/ic_coin" />
 
             <TextView
                 android:id="@+id/tv_buy_coins"
@@ -249,6 +246,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:id="@+id/llSetting"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView

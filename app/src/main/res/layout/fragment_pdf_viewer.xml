@@ -23,14 +23,16 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:background="@drawable/circular_bg"
                     android:id="@+id/btnDelete"
-                    android:src="@drawable/ic_arrow_left"/>
+                    android:src="@drawable/ic_trash_can"/>
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:src="@drawable/ic_arrow_left"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_shield_alert_outline"
                     android:layout_alignParentEnd="true"
                     android:background="@drawable/circular_bg"
                     android:layout_alignParentRight="true" />
@@ -38,7 +40,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_margin="10dp"
-                    android:src="@drawable/ic_arrow_left"
+                    android:src="@drawable/ic_like"
                     android:layout_below="@+id/btnDelete"
                     android:id="@+id/ivLike"
                      />

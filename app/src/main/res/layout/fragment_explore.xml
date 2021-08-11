@@ -23,18 +23,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginRight="5dp"
-            android:background="@color/green"
+            android:padding="5dp"
+            android:background="@drawable/main_gradient_color"
             android:id="@+id/btnGender"
             android:layout_weight="1">
             <ImageView
                 android:layout_width="18dp"
                 android:layout_height="18dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_gender"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="gender"
+                android:text="Gender"
                 android:textSize="18sp"
                 android:drawablePadding="10dp"
                 />
@@ -45,14 +47,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="@color/green"
+        android:background="@drawable/main_gradient_color"
+        android:padding="5dp"
         android:layout_weight="1">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="147"
             android:gravity="center"
-            android:drawableLeft="@drawable/ic_chevron_right"
+            android:drawableLeft="@drawable/ic_coin"
+            android:drawablePadding="5dp"
             />
     </LinearLayout>
     </LinearLayout>
@@ -64,19 +68,23 @@
         android:padding="20dp"
         android:id="@+id/relativeTop"
         >
+
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
             android:id="@+id/btnProfile"
-            android:src="@drawable/ic_launcher_background"
-            />
-        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:src="@drawable/ic_account_circle" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/btnHistory"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_history" />
 
     </RelativeLayout>
     <ImageView

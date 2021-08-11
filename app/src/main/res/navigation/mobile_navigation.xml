@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_friend" />
     <fragment
         android:id="@+id/navigation_friend"
-        android:name="com.example.kikyui.FriendFragment"
+        android:name="com.example.kikyui.fragment.FriendFragment"
         android:label="@string/title_friends"
         tools:layout="@layout/fragment_friend" />
 

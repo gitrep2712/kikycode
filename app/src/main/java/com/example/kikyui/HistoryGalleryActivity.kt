@@ -34,7 +34,9 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
         setContentView(R.layout.activity_doc_view)
 
 
-
+        btnBack.setOnClickListener{
+            finish()
+        }
         layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         rvSmallImage.layoutManager = layoutManager
         smallAdapter = SmallImageAdapter(this, this)

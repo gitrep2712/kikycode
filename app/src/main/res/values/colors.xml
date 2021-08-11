@@ -12,6 +12,8 @@
     <color name="green">#4CAF50</color>
     <color name="red">#EE7361</color>
     <color name="blue">#71DDFB</color>
+    <color name="darkBlue">#2D79F3</color>
     <color name="purple">#7074EF</color>
+    <color name="twitterBlue">#4B9CDC</color>
 
 </resources>

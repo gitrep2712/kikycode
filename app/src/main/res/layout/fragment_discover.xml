@@ -19,7 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
-        android:background="@color/green"
+        android:background="@drawable/round_side_corners"
+        android:backgroundTint="@color/green"
         android:drawableRight="@drawable/ic_chevron_right"
         android:padding="10dp"
         android:text="Online"
@@ -78,6 +79,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
+
         android:backgroundTint="@color/design_default_color_primary"
         android:background="@drawable/next_btn_bg"
         android:orientation="vertical">
@@ -92,7 +94,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/ic_chevron_right"
+            android:drawableLeft="@drawable/ic_coin"
+            android:drawablePadding="5dp"
             android:text="80 /Min"/>
     </LinearLayout>
 

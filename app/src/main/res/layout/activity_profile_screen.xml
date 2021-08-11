@@ -40,20 +40,23 @@
                 android:textStyle="bold"
                 android:layout_below="@+id/rvImages"
                 />
+
             <ImageView
+                android:id="@+id/likeIcon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/likeIcon"
-                android:src="@drawable/ic_launcher_background"
+                android:layout_below="@id/rvImages"
                 android:layout_alignParentRight="true"
-                android:layout_below="@id/rvImages"/>
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_heart_light" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1123"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/likeIcon"
-                />
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="1123" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,21 +139,21 @@
             android:layout_height="70dp"
             android:id="@+id/msgBtn"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_msg"
             />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:id="@+id/videoCallBtn"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_video_call_purple_bg"
             />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:id="@+id/callBtn"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_phone_pink_bg"
             />
 
 

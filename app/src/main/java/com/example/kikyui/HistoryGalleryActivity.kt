@@ -27,13 +27,19 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
     lateinit var adapter: HistoryImageViewPagerAdapter
     lateinit var smallAdapter:SmallImageAdapter
     private  val snapHelper= CenterSnapHelper()
+     var padding:Int=0
+
 
     lateinit var layoutManager: LinearLayoutManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doc_view)
 
-
+        val elementWidth =
+            resources.getDimension(R.dimen.list_item_width).toInt()
+        val elementMargin =
+            resources.getDimension(R.dimen.list_item_margin).toInt()
+         padding = Resources.getSystem().displayMetrics.widthPixels / 2 - elementWidth - elementMargin / 2
         btnBack.setOnClickListener{
             finish()
         }
@@ -109,10 +115,11 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
 
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(rvSmallImage)
+        rvSmallImage.onFlingListener=snapHelper
 
         //This is used to center first and last item on screen
 
-        //This is used to center first and last item on screen
+////        //This is used to center first and last item on screen
         rvSmallImage.addItemDecoration(object : ItemDecoration() {
             override fun getItemOffsets(
                 outRect: Rect,
@@ -131,14 +138,18 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
                         .displayMetrics.widthPixels / 2 - elementWidth - elementMargin / 2
                     if (position == 0) {
                         outRect.left = padding
-                    } else {
-                        outRect.right = padding
                     }
+//                    else
+//                    {
+//                        outRect.right = padding
+//                    }
                 }
             }
         })
+//
 //        rvSmallImage.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 //            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//
 //                rvSmallImage.post {
 //                    selectMiddleItem()
 //                }
@@ -156,11 +167,23 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
             ) {
 
 
-                rvSmallImage.scrollToPosition(position)
+//                rvSmallImage.scrollToPosition(position)
+
+                val width = (resources.displayMetrics.widthPixels )
+
+                val view: View = rvSmallImage.getChildAt(position) ?: return
+                var scrollX= view.left - (width / 2) + (view.width / 2)
+
+
+                smallAdapter.updateView(true,position)
+
+
+                rvSmallImage.smoothScrollBy(scrollX, 0)
             }
 
 
             override fun onPageSelected(position: Int) {
+                val pos = position
             }
         })
 

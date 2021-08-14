@@ -4,14 +4,346 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rvMessage"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-    </RelativeLayout>
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_headphone"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:text="Community Videos"
+                        android:textColor="@color/yellow"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/yellow"
+                         />
+
+                </LinearLayout>
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:textSize="14sp"-->
+                <!--                    android:text="You can get 100+ free coins" />-->
+
+
+            </LinearLayout>
+
+
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/rvMessage"-->
+            <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_bg"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_headphone"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Customer Service"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="right"
+                        android:text="17:30" />
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:text="You can get 100+ free coins" />-->
+
+
+            </LinearLayout>
+
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/rvMessage"-->
+            <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_orange_camera"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tumile Team"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="right"
+                        android:text="17:30" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:text="You can get 100+ free coins" />
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:background="@drawable/circular_bg"
+                        android:backgroundTint="@color/red"
+                        android:textColor="@color/white"
+                        android:text="1" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/rvMessage"-->
+            <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_orange_camera"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="New Friend Request"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="right"
+                        android:text="17:30" />
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:text="You can get 100+ free coins" />-->
+
+
+            </LinearLayout>
+
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/rvMessage"-->
+            <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/ivUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_orange_camera"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="System Notices"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="right"
+                        android:text="17:30" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Upload a profile photo and get" />
+
+
+            </LinearLayout>
+
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/rvMessage"-->
+            <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KikyUI">
         <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+        <activity
             android:name=".LinkSocialMediaActivity"
             android:exported="true" />
         <activity

@@ -12,4 +12,4 @@ class LinkSocialMediaActivity : AppCompatActivity() {
             finish()
         }
     }
-}
+} 

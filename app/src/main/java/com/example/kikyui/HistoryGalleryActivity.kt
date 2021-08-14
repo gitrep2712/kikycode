@@ -55,10 +55,10 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
         docViewPager.currentItem = 0
         docViewPager.offscreenPageLimit= 10
 
-        val nextItemVisiblePx = resources.getDimension(R.dimen.viewpager_next_item_visible)
+//        val nextItemVisiblePx = resources.getDimension(R.dimen.viewpager_next_item_visible)
         val currentItemHorizontalMarginPx =
             resources.getDimension(R.dimen.viewpager_current_item_horizontal_margin)
-        val pageTranslationX = nextItemVisiblePx + currentItemHorizontalMarginPx
+        val pageTranslationX =   currentItemHorizontalMarginPx
         val pageTransformer = ViewPager2.PageTransformer { page: View, position: Float ->
             page.translationX = -pageTranslationX * position
             // Next line scales the item's height. You can remove it if you don't want this effect
@@ -121,6 +121,7 @@ class HistoryGalleryActivity : AppCompatActivity(), SmallImageAdapter.SmallImage
                 state: RecyclerView.State
             ) {
                 val position = parent.getChildViewHolder(view).adapterPosition
+
                 if (position == 0 || position == state.itemCount - 1) {
                     val elementWidth =
                         resources.getDimension(R.dimen.list_item_width).toInt()

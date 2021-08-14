@@ -37,8 +37,8 @@ class MessageFragment : Fragment() {
 //        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
-        val rvMessage= binding.rvMessage
-        rvMessage.adapter= activity?.let { MessageListAdapter(it) }
+//        val rvMessage= binding.rvMessage
+//        rvMessage.adapter= activity?.let { MessageListAdapter(it) }
         return root
     }
 

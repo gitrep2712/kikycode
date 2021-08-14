@@ -68,7 +68,7 @@ class ExploreFragment : Fragment() {
             startActivity(intent)
         }
         btnGddess.setOnClickListener {
-            val intent=Intent(activity,GddesActivity::class.java)
+            val intent=Intent(activity,ChatActivity::class.java)
             startActivity(intent)
         }
         btnGender.setOnClickListener{

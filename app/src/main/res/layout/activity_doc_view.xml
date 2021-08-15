@@ -71,8 +71,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSmallImage"
         android:layout_width="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar" />
 
 
 <!--    <include android:id="@+id/bottomView" layout="@layout/bottom_view"-->

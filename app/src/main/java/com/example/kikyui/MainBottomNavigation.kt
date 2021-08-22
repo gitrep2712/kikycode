@@ -1,6 +1,8 @@
 package com.example.kikyui
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -22,6 +24,7 @@ class MainBottomNavigation : AppCompatActivity() {
 
         navView.itemIconTintList = null;
 
+
         val navController =
             findNavController(R.id.nav_host_fragment_activity_main_bottom_navigation)
         // Passing each menu ID as a set of Ids because each
@@ -36,4 +39,5 @@ class MainBottomNavigation : AppCompatActivity() {
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
 }

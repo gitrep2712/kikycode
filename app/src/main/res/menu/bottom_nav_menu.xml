@@ -3,21 +3,21 @@
 
     <item
         android:id="@+id/navigation_explore"
-        android:icon="@drawable/ic_orange_camera"
+        android:icon="@drawable/ic_match"
         android:title="@string/title_explore" />
 
     <item
         android:id="@+id/navigation_discover"
-        android:icon="@drawable/ic_history"
+        android:icon="@drawable/ic_clock"
         android:title="@string/title_discover" />
 
     <item
         android:id="@+id/navigation_message"
-        android:icon="@drawable/ic_equals"
+        android:icon="@drawable/ic_book"
         android:title="@string/title_message" />
     <item
         android:id="@+id/navigation_friend"
-        android:icon="@drawable/ic_people"
+        android:icon="@drawable/ic_msg1"
         android:title="@string/title_friends" />
 
 </menu>

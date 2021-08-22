@@ -9,6 +9,26 @@
         android:id="@+id/viewFinder"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5"
+        android:id="@+id/rlOpaque"
+        />
+    <View
+        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/white"
+        android:alpha="0.5"
+        android:id="@+id/opaqueView"
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,64 +38,164 @@
         android:padding="10dp"
         android:id="@+id/linearTop"
         app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearTop"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btnProfile"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/ic_user" />
+
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_28sdp"
             android:gravity="center"
             android:layout_marginRight="5dp"
-            android:background="@drawable/main_gradient_color"
+            android:background="@drawable/round_corner_36"
+            android:backgroundTint="@color/blackOpaque"
             android:id="@+id/btnGender"
-            android:layout_weight="1">
+            android:padding="@dimen/_5sdp"
+            android:layout_weight="2">
             <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/ic_gender"/>
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+
+                android:src="@drawable/ic_both"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="gender"
-                android:textSize="18sp"
+                android:padding="@dimen/_2sdp"
+                android:text="Both"
+                android:textColor="@color/white"
+                android:textSize="12sp"
                 android:drawablePadding="10dp"
                 />
         </LinearLayout>
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:background="@drawable/round_corners_6"-->
+<!--            android:backgroundTint="@color/grey_bg"-->
+<!--            android:id="@+id/btnLocation"-->
+<!--            android:layout_weight="1">-->
+<!--            <ImageView-->
+<!--                android:layout_width="18dp"-->
+<!--                android:layout_height="18dp"-->
+<!--                android:src="@drawable/ic_location"/>-->
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="@dimen/_2sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Global"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="18sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:drawablePadding="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                />&ndash;&gt;-->
+<!--        </LinearLayout>-->
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_28sdp"
             android:gravity="center"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/main_gradient_color"
-            android:id="@+id/btnLocation"
+            android:background="@drawable/round_corner_36"
+            android:backgroundTint="@color/blackOpaque"
+            android:padding="@dimen/_5sdp"
             android:layout_weight="1">
             <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/ic_gender"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Location"
-                android:textSize="18sp"
-                android:drawablePadding="10dp"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@drawable/main_gradient_color"
-            android:layout_weight="1">
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_coin"
+                android:layout_marginRight="5dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="147"
                 android:gravity="center"
-                android:drawableLeft="@drawable/ic_chevron_right"
+                android:padding="@dimen/_2sdp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="@dimen/_100sdp"
+        app:layout_constraintTop_toBottomOf="@id/linearTop"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/llDottedTop"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|\n|\n|\n|\n"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Gender you want to match with"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/titleGenderMsg"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginLeft="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@id/llDottedTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleGenderMsg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/_45sdp"
+        android:id="@+id/genderImages"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_male"/>
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:src="@drawable/ic_both"/>
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_male"/>
+
     </LinearLayout>
 
     <RelativeLayout
@@ -83,30 +203,97 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearTop"
-        android:padding="20dp"
         android:id="@+id/relativeTop"
+        android:padding="@dimen/_12sdp"
         >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/btnProfile"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_launcher_background" />
-
-
+        <ImageView
+            android:id="@+id/btnHistory"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/blackOpaque"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="center"
+            android:src="@drawable/ic_history_1" />
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeTop"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:id="@+id/llDotted"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|\n|\n|\n|\n|\n|\n|\n|\n"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to your profile"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/llDotted"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tvProfileMsg"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/pulse_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/circular_bg"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:backgroundTint="@color/blackOpaque"
+        android:textColor="@color/white"
+        android:alpha="0.5"
+        android:text="Click to start"
+        android:gravity="center"
+        />
+        <TextView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:text="I got it"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/round_corner_36_white"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/closeTutorial"
+            />
+
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:layout_constraintTop_toBottomOf="@id/linearTop"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@drawable/round_corners_14"
+        android:scaleType="fitXY"
 
         android:id="@+id/btnGddes"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/sample_model" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -124,7 +311,7 @@
                 android:layout_marginBottom="16dp"
 
                 android:background="@drawable/round_corners_14"
-                android:backgroundTint="@color/purple"
+                android:backgroundTint="@color/yellow"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -153,7 +340,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/ic_orange_camera"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -164,8 +351,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
-
             >
 
 
@@ -177,7 +362,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/round_corners_14"
-                android:backgroundTint="@color/purple"
+                android:backgroundTint="@color/yellow"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"

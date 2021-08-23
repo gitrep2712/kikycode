@@ -9,7 +9,7 @@
         android:id="@+id/navigation_explore"
         android:name="com.example.kikyui.ui.home.ExploreFragment"
         android:label="@string/title_explore"
-        tools:layout="@layout/fragment_explore" />
+        tools:layout="@layout/fragment_explore2" />
 
     <fragment
         android:id="@+id/navigation_discover"

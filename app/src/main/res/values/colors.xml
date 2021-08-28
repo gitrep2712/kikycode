@@ -16,5 +16,7 @@
     <color name="purple">#7074EF</color>
     <color name="twitterBlue">#4B9CDC</color>
     <color name="yellow">#FFC107</color>
+    <color name="blackOpaque">#26000000</color>
+
 
 </resources>

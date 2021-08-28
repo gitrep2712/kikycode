@@ -22,13 +22,23 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.kikyui.*
-import com.example.kikyui.databinding.FragmentExploreBinding
+import com.example.kikyui.databinding.FragmentExplore2Binding
+//import com.example.kikyui.databinding.FragmentExploreBinding
 import kotlinx.android.synthetic.main.fragment_explore.*
+import kotlinx.android.synthetic.main.fragment_explore.viewFinder
+import kotlinx.android.synthetic.main.fragment_explore2.*
+import android.animation.ObjectAnimator
+
+import android.animation.PropertyValuesHolder
+
+
+
+
 
 class ExploreFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentExploreBinding? = null
+    private var _binding: FragmentExplore2Binding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -43,12 +53,25 @@ class ExploreFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentExploreBinding.inflate(inflater, container, false)
+        _binding = FragmentExplore2Binding.inflate(inflater, container, false)
         val root: View = binding.root
         val btnProfile = binding.btnProfile
-        val btnHistory= binding.btnHistory
+//        val btnHistory= binding.btnHistory
         val btnGddess=binding.btnGddes
         val btnGender = binding.btnGender
+        val closeTutorial = binding.closeTutorial
+        val genderMsg = binding.titleGenderMsg
+        val dottedTop = binding.llDottedTop
+        val dotted = binding.llDotted
+        val profileMsg = binding.tvProfileMsg
+        val genderImages = binding.genderImages
+        val rlOpaque = binding.rlOpaque
+        val viewOpaque = binding.opaqueView
+        val pulseView = binding.pulseView
+//        pulseView.startPulse();
+
+          // 50% transparent
+
         if (allPermissionsGranted()) {
             startCamera()
         } else {
@@ -63,10 +86,10 @@ class ExploreFragment : Fragment() {
             val intent = Intent(activity,AccountSettingActivity::class.java)
             startActivity(intent)
         }
-        btnHistory.setOnClickListener {
-            val intent = Intent(activity, HistoryGalleryActivity::class.java)
-            startActivity(intent)
-        }
+//        btnHistory.setOnClickListener {
+//            val intent = Intent(activity, HistoryGalleryActivity::class.java)
+//            startActivity(intent)
+//        }
         btnGddess.setOnClickListener {
             val intent=Intent(activity,ChatActivity::class.java)
             startActivity(intent)
@@ -74,8 +97,30 @@ class ExploreFragment : Fragment() {
         btnGender.setOnClickListener{
                 showDialog("Gender Preferences")
         }
+        closeTutorial.setOnClickListener {
+            genderMsg.visibility=View.GONE
+            dottedTop.visibility=View.GONE
+            dotted.visibility=View.GONE
+            profileMsg.visibility=View.GONE
+            genderImages.visibility=View.GONE
+            rlOpaque.visibility=View.GONE
+            viewOpaque.visibility=View.GONE
+            closeTutorial.visibility=View.GONE
+            pulseView.alpha = 1f;
+        }
 //
 
+        val scaleDown: ObjectAnimator = ObjectAnimator.ofPropertyValuesHolder(
+            pulseView,
+            PropertyValuesHolder.ofFloat("scaleX", 1.2f),
+            PropertyValuesHolder.ofFloat("scaleY", 1.2f)
+        )
+        scaleDown.duration = 500
+
+        scaleDown.repeatCount = ObjectAnimator.INFINITE
+        scaleDown.repeatMode = ObjectAnimator.REVERSE
+
+        scaleDown.start()
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blackOpaque"
     tools:context=".VideoCallActivity">
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
@@ -14,15 +15,164 @@
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
         />
+
+    <ImageView
+        android:id="@+id/btnAddFriend"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:src="@drawable/ic_account_plus"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:padding="@dimen/_4sdp"
+        android:background="@drawable/circular_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/sample_model"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/userImage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13ssp"
+            android:text="Katrina"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+           >
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_location"
+                android:layout_marginRight="@dimen/_5sdp"
+                app:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="India"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_like"
+                android:layout_marginRight="@dimen/_5sdp"
+                app:tint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="1"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnShield"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:src="@drawable/ic_sheild_1"
+        android:backgroundTint="@color/blackOpaque"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:padding="@dimen/_4sdp"
+        android:background="@drawable/circular_bg"
+        app:layout_constraintTop_toBottomOf="@id/userImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llBottom"
         app:layout_constraintLeft_toRightOf="@+id/viewFinder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
         >
+        <ImageView
+            android:id="@+id/btnEmoji"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/blackOpaque"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_smiley" />
+        <ImageView
+            android:id="@+id/btnMessage"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:tint="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/blackOpaque"
+            android:src="@drawable/ic_messenger" />
+        <ImageView
+            android:id="@+id/btnLanguage"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            app:tint="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/blackOpaque"
+            android:src="@drawable/ic_language" />
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            app:tint="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/blackOpaque"
+            android:src="@drawable/ic_close" />
+
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnGift"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:src="@drawable/gift_box_white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llBottom"
+        android:backgroundTint="#FFE85D99"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_4sdp"
+        android:background="@drawable/circular_bg"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

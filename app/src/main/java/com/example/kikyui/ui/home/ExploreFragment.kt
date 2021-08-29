@@ -121,6 +121,9 @@ class ExploreFragment : Fragment() {
         scaleDown.repeatMode = ObjectAnimator.REVERSE
 
         scaleDown.start()
+        pulseView.setOnClickListener {
+            startActivity(Intent(activity,ConnectingActivity::class.java))
+        }
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it

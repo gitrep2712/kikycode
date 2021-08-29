@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KikyUI">
         <activity
+            android:name=".ConnectingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoCallActivity"
+            android:exported="true" />
+        <activity
             android:name=".ChatActivity"
             android:exported="true" />
         <activity

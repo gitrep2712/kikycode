@@ -10,8 +10,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.kikyui.databinding.ActivityMainBottomNavigationBinding
+import com.example.kikyui.fragment.GenderBottomSheet
 
-class MainBottomNavigation : AppCompatActivity() {
+class MainBottomNavigation : AppCompatActivity(),GenderBottomSheet.ItemClickListener {
 
     private lateinit var binding: ActivityMainBottomNavigationBinding
 
@@ -38,6 +39,9 @@ class MainBottomNavigation : AppCompatActivity() {
         actionBar?.hide()
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onItemClick(item: String?) {
     }
 
 }

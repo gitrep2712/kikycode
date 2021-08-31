@@ -30,12 +30,10 @@ import kotlinx.android.synthetic.main.fragment_explore2.*
 import android.animation.ObjectAnimator
 
 import android.animation.PropertyValuesHolder
+import com.example.kikyui.fragment.GenderBottomSheet
 
 
-
-
-
-class ExploreFragment : Fragment() {
+class ExploreFragment : Fragment(),GenderBottomSheet.ItemClickListener {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentExplore2Binding? = null
@@ -83,7 +81,7 @@ class ExploreFragment : Fragment() {
 
 
         btnProfile.setOnClickListener{
-            val intent = Intent(activity,AccountSettingActivity::class.java)
+            val intent = Intent(activity,HistoryGalleryActivity::class.java)
             startActivity(intent)
         }
 //        btnHistory.setOnClickListener {
@@ -155,23 +153,32 @@ class ExploreFragment : Fragment() {
         dialog?.show()
 
     }
+
     private fun showDialog(title: String) {
-        val dialog = activity?.let { Dialog(it) }
-        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog?.setCancelable(true)
-        dialog?.setContentView(R.layout.custom_report_dialog)
-        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
-        val height = (resources.displayMetrics.heightPixels * 0.90).toInt()
-        dialog?.window?.setLayout(width,ActionBar.LayoutParams.WRAP_CONTENT);
-//        val body = dialog?.findViewById(R.id.body) as TextView
-//        body.text = title
-//        val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
-//        val noBtn = dialog.findViewById(R.id.noBtn) as TextView
-//        yesBtn.setOnClickListener {
-//            dialog.dismiss()
-//        }
-//        noBtn.setOnClickListener { dialog.dismiss() }
-        dialog?.show()
+        val addPhotoBottomDialogFragment: GenderBottomSheet =
+            GenderBottomSheet()
+        activity?.let {
+            addPhotoBottomDialogFragment.show(
+                it.supportFragmentManager,null
+            )
+        }
+//
+//        val dialog = activity?.let { Dialog(it) }
+//        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        dialog?.setCancelable(true)
+//        dialog?.setContentView(R.layout.custom_report_dialog)
+//        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+//        val height = (resources.displayMetrics.heightPixels * 0.90).toInt()
+//        dialog?.window?.setLayout(width,ActionBar.LayoutParams.WRAP_CONTENT);
+////        val body = dialog?.findViewById(R.id.body) as TextView
+////        body.text = title
+////        val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
+////        val noBtn = dialog.findViewById(R.id.noBtn) as TextView
+////        yesBtn.setOnClickListener {
+////            dialog.dismiss()
+////        }
+////        noBtn.setOnClickListener { dialog.dismiss() }
+//        dialog?.show()
 
     }
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
@@ -232,6 +239,10 @@ class ExploreFragment : Fragment() {
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
+    }
+
+    override fun onItemClick(item: String?) {
+
     }
 
 }

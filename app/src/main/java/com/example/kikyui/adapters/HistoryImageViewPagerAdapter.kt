@@ -11,7 +11,7 @@ class HistoryImageViewPagerAdapter(fragmentActivity: FragmentActivity): Fragment
 //    private val pageIds= docSingleton.data.map { it.hashCode().toLong()}
 
         override fun getItemCount(): Int {
-            return 10
+            return 20
 //        return docSingleton.data.size
     }
 

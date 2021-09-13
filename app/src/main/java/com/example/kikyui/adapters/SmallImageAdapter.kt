@@ -31,7 +31,7 @@ class SmallImageAdapter(val listener:SmallImageOnclick,val context: Context): Re
     }
 
     override fun getItemCount(): Int {
-        return 20
+        return 10
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

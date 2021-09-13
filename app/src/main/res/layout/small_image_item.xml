@@ -7,10 +7,10 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="35dp"
         android:id="@+id/ivSmall"
-        android:src="@drawable/sample_model"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        app:civ_border_color="@color/yellow"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        app:civ_border_color="@color/black"
         android:layout_height="130dp"/>
 
 </RelativeLayout>

@@ -1,187 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:contentInsetLeft="0dp"-->
-<!--        android:contentInsetStart="0dp"-->
-<!--        app:contentInsetLeft="0dp"-->
-<!--        app:contentInsetStart="0dp"-->
-<!--        android:contentInsetRight="0dp"-->
-<!--        android:contentInsetEnd="0dp"-->
-<!--        app:contentInsetRight="0dp"-->
-<!--        app:contentInsetEnd="0dp"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:id="@+id/toolbar">-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            >-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/btnBack"-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_alignParentStart="true"-->
-<!--                android:layout_alignParentLeft="true"-->
-<!--                android:src="@drawable/ic_arrow_left" />-->
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_toRightOf="@+id/btnBack"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                >-->
-
-<!--                &lt;!&ndash;                <de.hdodenhof.circleimageview.CircleImageView&ndash;&gt;-->
-<!--                &lt;!&ndash;                    android:layout_width="40dp"&ndash;&gt;-->
-<!--                &lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
-<!--                &lt;!&ndash;                    android:id="@+id/ivUser"&ndash;&gt;-->
-<!--                &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
-<!--                &lt;!&ndash;                    android:src="@drawable/ic_orange_camera"/>&ndash;&gt;-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:text="Tumile Team"-->
-<!--                    android:gravity="center"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:layout_toRightOf="@+id/ivUser" />-->
-
-<!--            </LinearLayout>-->
-<!--        </RelativeLayout>-->
-
-<!--    </androidx.appcompat.widget.Toolbar>-->
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/docViewPager"
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/rvSmallImage"/>
+        android:layout_height="match_parent" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/rvSmallImage"
-        android:id="@+id/tvDocumentCount"
-        android:text=""/>
+        android:layout_marginTop="88dp"
+        android:background="@drawable/round_side_corners"
+        android:backgroundTint="@color/green"
+        android:drawableRight="@drawable/ic_chevron_right"
+        android:padding="10dp"
+        android:text="Online"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSmallImage"
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:drawableRight="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toTopOf="@+id/tvLocation"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="Location"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Videos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="@dimen/_50sdp"
-         />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
 
+        android:backgroundTint="@color/design_default_color_primary"
+        android:background="@drawable/next_btn_bg"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Video Chat Now"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_coin"
+            android:drawablePadding="5dp"
+            android:text="80 /Min"/>
+    </LinearLayout>
 
-    <!--    <include android:id="@+id/bottomView" layout="@layout/bottom_view"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_width="wrap_content" />-->
-
-</RelativeLayout>
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--    <VideoView-->
-<!--        android:id="@+id/videoView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="88dp"-->
-<!--        android:background="@drawable/round_side_corners"-->
-<!--        android:backgroundTint="@color/green"-->
-<!--        android:drawableRight="@drawable/ic_chevron_right"-->
-<!--        android:padding="10dp"-->
-<!--        android:text="Online"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tvName"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Name"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:drawableRight="@drawable/ic_chevron_right"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/tvLocation"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tvLocation"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="76dp"-->
-<!--        android:text="Location"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="18sp"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tvTitle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginTop="36dp"-->
-<!--        android:text="Videos"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:gravity="center"-->
-
-<!--        android:backgroundTint="@color/design_default_color_primary"-->
-<!--        android:background="@drawable/next_btn_bg"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:text="Video Chat Now"/>-->
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:drawableLeft="@drawable/ic_coin"-->
-<!--            android:drawablePadding="5dp"-->
-<!--            android:text="80 /Min"/>-->
-<!--    </LinearLayout>-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--</FrameLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

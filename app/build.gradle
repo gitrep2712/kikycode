@@ -59,6 +59,9 @@ dependencies {
     implementation 'com.intuit.ssp:ssp-android:1.0.6' //text sp
     implementation 'com.dannyyassine.pulseviewlibrary:pulse-view:1.1'
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.15.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.15.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.15.0'
 
 
     def camerax_version = "1.0.0"

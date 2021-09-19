@@ -11,13 +11,24 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.kikyui.ConnectingActivity.Companion.currentConnectedUser
+import com.example.kikyui.ConnectingActivity.Companion.currentUserId
 import com.example.kikyui.ui.home.ExploreFragment
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_video_call.*
 import kotlinx.android.synthetic.main.fragment_explore.*
+import kotlinx.android.synthetic.main.fragment_explore.viewFinder
 
 class VideoCallActivity : AppCompatActivity() {
+    lateinit var db : FirebaseFirestore
+    var myOwnId = "HvSJWvX0rpFA7j3ZwIjE"
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video_call)
+        db= FirebaseFirestore.getInstance()
+
         if (allPermissionsGranted()) {
             startCamera()
         } else {
@@ -25,11 +36,38 @@ class VideoCallActivity : AppCompatActivity() {
                     this, REQUIRED_PERMISSIONS,
                     REQUEST_CODE_PERMISSIONS
                 )
-            }
+        }
+
+        Toast.makeText(this, currentConnectedUser["name"].toString(),Toast.LENGTH_SHORT).show()
+        btnClose.setOnClickListener {
+            disconnect(currentConnectedUser, currentUserId)
+
+        }
 
 
     }
 
+    fun disconnect(data: MutableMap<String, Any>, id: String,callNext:Boolean=true) {
+        Toast.makeText(this,"disconnect..",Toast.LENGTH_SHORT).show()
+        data["status"] = "available"
+        db.collection("users").document(id).update(data).addOnSuccessListener {
+            val myData = mutableMapOf<String, Any?>()
+            myData["name"]="raeid"
+            myData["status"] = "available"
+
+
+            db.collection("users")
+                .document(myOwnId)
+                .update(myData)
+                .addOnSuccessListener {
+                       finish()
+
+            }
+        }
+
+
+
+    }
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(
                 this, it)== PackageManager.PERMISSION_GRANTED
